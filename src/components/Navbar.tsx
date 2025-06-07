@@ -50,7 +50,7 @@ const NavbarLink: React.FC<NavbarLinkProps> = ({ href, label, isActive }) => {
   return (
     <Link
       href={href}
-      className={`w-full px-4 py-3 text-lg rounded-xl  transition-all duration-300 ${
+      className={`w-full px-3 py-3 text-md rounded-lg  transition-all duration-300 ${
         isActive
           ? "bg-accent font-semibold hover:bg-accent"
           : "hover:bg-secondary"

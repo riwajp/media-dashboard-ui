@@ -31,7 +31,7 @@ const Selector: React.FC<SelectorProps> = ({ label, icon, options }) => {
         className="flex justify-between items-center gap-2 cursor-pointer p-3 rounded-xl hover:bg-base-200 duration-300 w-full"
       >
         <div className="text-xl text-accent">{icon}</div>
-        <div className="text-white font-semibold">{label}</div>
+        <div className="text-base-content font-semibold">{label}</div>
         <HiSelector className="text-2xl text-accent" />
       </button>
 

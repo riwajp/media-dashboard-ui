@@ -12,7 +12,7 @@ const ChannelCard: React.FC<ChannelCardProps> = ({ label, imageSrc }) => {
       <div className="grow flex flex-col justify-center ">
         <Image src={imageSrc} alt={label} width={75} height={75} />
       </div>
-      <div className="text-md font-semibold text-white text-center">
+      <div className="text-md font-semibold text-base-content text-center">
         {label}
       </div>
     </div>

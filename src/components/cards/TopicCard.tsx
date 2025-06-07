@@ -1,16 +1,18 @@
-import Image from "next/image";
+import { FiPlus } from "react-icons/fi";
 import React from "react";
 
 type TopicCardProps = {
   label: string;
-  imageSrc: string;
+  className?: string;
 };
 
-const TopicCard: React.FC<TopicCardProps> = ({ label, imageSrc }) => {
+const TopicCard: React.FC<TopicCardProps> = ({ label, className }) => {
   return (
-    <div className="flex flex-col gap-8 bg-base-300 p-4 rounded-md justify-between">
-      <Image src={imageSrc} alt={label} width={75} height={75} />
-      <div className="text-xl font-semibold text-white">{label}</div>
+    <div
+      className={`bg-base-300 hover:bg-secondary transition-all duration-200 flex gap-2 items-center justify-between rounded-3xl px-3 py-1 text-sm cursor-pointer ${className}`}
+    >
+      <div>{label}</div>
+      <FiPlus />
     </div>
   );
 };

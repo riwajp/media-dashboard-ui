@@ -16,7 +16,7 @@ export default async function DashboardLayout({
       <div className="fixed top-0 left-0 pl-60 right-0 w-full  h-32">
         <Headerbar />
       </div>
-      <div className="pl-64 pt-32 pr-4 pb-4 ">{children}</div>
+      <div className="pl-60 pt-32 pb-4 ">{children}</div>
     </div>
   );
 }

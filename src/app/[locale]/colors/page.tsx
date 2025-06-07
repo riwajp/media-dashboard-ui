@@ -27,7 +27,20 @@ const ThemeColorPalette: React.FC = () => {
       </label>
 
       <h1 className="text-3xl font-bold mb-8">DaisyUI Theme Colors</h1>
+
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        {/* base */}
+
+        <div className="rounded-xl p-6 shadow-md bg-base-300 text-base-300-content transition-colors duration-300">
+          <h2 className="text-xl font-semibold capitalize">base-300</h2>
+          <p className="text-sm mt-1">bg-base-300 / text-base-content</p>
+        </div>
+
+        <div className="rounded-xl p-6 shadow-md bg-base-400 text-base-400-content transition-colors duration-300">
+          <h2 className="text-xl font-semibold capitalize">base-400</h2>
+          <p className="text-sm mt-1">bg-base-400 / text-base-content</p>
+        </div>
+
         {/* primary */}
         <div className="rounded-xl p-6 shadow-md bg-primary text-primary-content transition-colors duration-300">
           <h2 className="text-xl font-semibold capitalize">primary</h2>

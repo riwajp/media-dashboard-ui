@@ -19,7 +19,11 @@ const Search: React.FC<SearchProps> = () => {
             clipRule="evenodd"
           />
         </svg>
-        <input type="text" className="grow text-white " placeholder="Search" />
+        <input
+          type="text"
+          className="grow text-base-content "
+          placeholder="Search"
+        />
       </label>
 
       <button className="btn btn-square btn-ghost  text-accent text-xl bg-base-300 hover:bg-base-200">
