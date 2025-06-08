@@ -1,5 +1,5 @@
 import React from "react";
-import { getScopedI18n } from "@locales/server";
+
 import Selector from "./Selector";
 import { LuLanguages } from "react-icons/lu";
 import { FaCalendarAlt } from "react-icons/fa";
@@ -10,8 +10,8 @@ type HeaderbarProps = {};
 
 const Headerbar: React.FC<HeaderbarProps> = () => {
   return (
-    <div className="flex justify-between items-center w-full px-6 py-6">
-      <div className="flex gap-6 items-center">
+    <div className="flex bg-base-100 justify-between items-center w-full px-4 py-4">
+      <div className="flex gap-4 items-center">
         <ThemeToogle />
         <Selector
           label="Nepali"
@@ -27,7 +27,9 @@ const Headerbar: React.FC<HeaderbarProps> = () => {
 
       <div className="flex gap-4">
         <Search />
-        <button className="btn btn-accent px-10 py-2 rounded-sm">LOGIN</button>
+        <button className="btn btn-accent px-10 py-2 rounded-sm h-11 min-h-11">
+          LOGIN
+        </button>
       </div>
     </div>
   );

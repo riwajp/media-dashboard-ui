@@ -1,32 +1,79 @@
 [
   {
-    "label": "TKP",
-    "imageSrc": "https://tendernotice.com.np/images/TheKathmanduPost.png?_debugResources=y&n=1748976238281"
+    "id": "TKP",
+    "label": "The Kathmandu Post",
+    "imageSrc": "https://tendernotice.com.np/images/TheKathmanduPost.png?_debugResources=y&n=1748976238281",
+    "trending": ["politics", "economy", "governance"],
+    "bias": [
+      { "party": "uml", "percentage": 60 },
+      { "party": "nc", "percentage": 25 },
+      { "party": "mc", "percentage": 15 }
+    ]
   },
   {
-    "label": "THT",
-    "imageSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCnIZ9wYAJ-2ZblcXNiyyZ7zoYSqoJHm4_iw&s"
+    "id": "THT",
+    "label": "The Himalayan Times",
+    "imageSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCnIZ9wYAJ-2ZblcXNiyyZ7zoYSqoJHm4_iw&s",
+    "trending": ["sports", "international", "covid-19"],
+    "bias": [
+      { "party": "uml", "percentage": 40 },
+      { "party": "nc", "percentage": 35 },
+      { "party": "mc", "percentage": 25 }
+    ]
   },
   {
-    "label": "Republica",
-    "imageSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgda1UVmKHmwcpqP8Zf6KzqJ-SIesI61MdVw&s"
+    "id": "Republica",
+    "label": "Republica Daily",
+    "imageSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgda1UVmKHmwcpqP8Zf6KzqJ-SIesI61MdVw&s",
+    "trending": ["development", "education", "startup"],
+    "bias": [
+      { "party": "uml", "percentage": 30 },
+      { "party": "nc", "percentage": 50 },
+      { "party": "mc", "percentage": 20 }
+    ]
   },
-
   {
-    "label": "OnlineKhabar",
-    "imageSrc": "https://play-lh.googleusercontent.com/7fQNxv7HXXzN8SivPrNCxvK6Wii_VcKmvyGUvXDlGumOaBOxeFPOAk1zZ2BrWzW3TQ"
+    "id": "OnlineKhabar",
+    "label": "Online Khabar",
+    "imageSrc": "https://play-lh.googleusercontent.com/7fQNxv7HXXzN8SivPrNCxvK6Wii_VcKmvyGUvXDlGumOaBOxeFPOAk1zZ2BrWzW3TQ",
+    "trending": ["crime", "entertainment", "elections"],
+    "bias": [
+      { "party": "uml", "percentage": 55 },
+      { "party": "nc", "percentage": 30 },
+      { "party": "mc", "percentage": 15 }
+    ]
   },
   {
-    "label": "BBC",
-    "imageSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdKl7Ijh5CSKj6oQaVDsS67cnnLJ9NA74t8w&s"
+    "id": "BBC",
+    "label": "BBC News",
+    "imageSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdKl7Ijh5CSKj6oQaVDsS67cnnLJ9NA74t8w&s",
+    "trending": ["UK politics", "world news", "climate change"],
+    "bias": [
+      { "party": "uml", "percentage": 20 },
+      { "party": "nc", "percentage": 40 },
+      { "party": "mc", "percentage": 40 }
+    ]
   },
-
   {
+    "id": "Ratopati",
     "label": "Ratopati",
-    "imageSrc": "https://npcdn.ratopati.com/media/setting/ratopati-logo_rpYvtHpSAH.png"
+    "imageSrc": "https://npcdn.ratopati.com/media/setting/ratopati-logo_rpYvtHpSAH.png",
+    "trending": ["social issues", "health", "digital economy"],
+    "bias": [
+      { "party": "uml", "percentage": 65 },
+      { "party": "nc", "percentage": 20 },
+      { "party": "mc", "percentage": 15 }
+    ]
   },
   {
-    "label": "NepalKhabar",
-    "imageSrc": "https://nepalkhabar.prixacdn.net/static/normal/images/assets/nklogonew.svg"
+    "id": "NepalKhabar",
+    "label": "Nepal Khabar",
+    "imageSrc": "https://nepalkhabar.prixacdn.net/static/normal/images/assets/nklogonew.svg",
+    "trending": ["breaking news", "parliament", "court rulings"],
+    "bias": [
+      { "party": "uml", "percentage": 35 },
+      { "party": "nc", "percentage": 45 },
+      { "party": "mc", "percentage": 20 }
+    ]
   }
 ]

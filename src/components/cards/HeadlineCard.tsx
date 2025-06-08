@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { FaClock } from "react-icons/fa6";
-import BiasMeter from "./BiasMeter";
+import BiasMeter from "../BiasMeter";
 
 type TopicCardProps = {
   label: string;

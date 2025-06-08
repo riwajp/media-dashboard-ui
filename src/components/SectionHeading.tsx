@@ -13,11 +13,11 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({
 }) => {
   return (
     <div className="flex justify-between items-center w-full pb-6">
-      <div className="text-2xl font-extrabold ">{title}</div>
+      <div className="text-xl font-bold ">{title}</div>
       {seeAllUrl && (
         <Link
           href={seeAllUrl}
-          className="text-lg text-accent flex gap-1 items-center cursor-pointer "
+          className="text-md text-accent flex gap-1 items-center cursor-pointer "
         >
           See all <PiCaretRightBold className="text-sm mt-1 " />
         </Link>

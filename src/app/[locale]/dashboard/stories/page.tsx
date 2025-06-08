@@ -1,12 +1,14 @@
 import ChannelCard from "@/components/cards/ChannelCard";
 import TopicCard from "@/components/cards/TopicCard";
 import Draggable from "@/components/Draggable";
-import HeadlineCard from "@/components/HeadlineCard";
+import HeadlineCard from "@/components/cards/HeadlineCard";
 import SectionHeading from "@/components/SectionHeading";
 import { mockFetch } from "@/utils";
+import Link from "next/link";
 import { IoIosTrendingUp } from "react-icons/io";
 
 type TOutlet = {
+  id: string;
   label: string;
   imageSrc: string;
 };
@@ -89,19 +91,28 @@ export default async function Page() {
             ))}
           </div>
         </div>
-        {/* <div>
-          <SectionHeading title="Explore Outlets" seeAllUrl="channels" />
 
-          <div className="flex gap-6">
-            {outlets.map((outlet: TOutlet) => (
-              <ChannelCard
-                key={outlet.label}
-                imageSrc={outlet.imageSrc}
-                label={outlet.label}
-              />
-            ))}
-          </div>
-        </div> */}
+        {/* Outlets */}
+        <div className="px-4">
+          <SectionHeading title="Explore Outlets" seeAllUrl="outlets" />
+          <Draggable>
+            <div className="flex gap-6 ">
+              {outlets.map((outlet: TOutlet) => (
+                <Link
+                  href={`/dashboard/outlets/${outlet.id}`}
+                  key={outlet.label}
+                >
+                  <ChannelCard
+                    id={outlet.id}
+                    key={outlet.id}
+                    imageSrc={outlet.imageSrc}
+                    label={outlet.label}
+                  />
+                </Link>
+              ))}
+            </div>
+          </Draggable>
+        </div>
         <div></div>
       </div>
     );

@@ -6,7 +6,7 @@ type SearchProps = {};
 const Search: React.FC<SearchProps> = () => {
   return (
     <div className="flex gap-2 items-center">
-      <label className="input bg-base-300 flex items-center gap-2 text-accent ">
+      <label className="input bg-base-300 flex items-center gap-2 text-accent h-11 ">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 16 16"
@@ -26,7 +26,7 @@ const Search: React.FC<SearchProps> = () => {
         />
       </label>
 
-      <button className="btn btn-square btn-ghost  text-accent text-xl bg-base-300 hover:bg-base-200">
+      <button className="btn btn-square btn-ghost p-1  rounded-lg text-accent text-lg bg-base-300 hover:bg-base-200 min-h-11  h-11">
         <IoSearch />
       </button>
     </div>

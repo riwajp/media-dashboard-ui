@@ -4,16 +4,23 @@ import React from "react";
 type ChannelCardProps = {
   label: string;
   imageSrc: string;
+  id: string;
 };
 
-const ChannelCard: React.FC<ChannelCardProps> = ({ label, imageSrc }) => {
+const ChannelCard: React.FC<ChannelCardProps> = ({ label, imageSrc, id }) => {
   return (
-    <div className="  cursor-pointer hover:shadow-2xl hover:bg-base-200 transition-all duration-300 flex flex-col gap-4 bg-base-300 px-2 py-5 rounded-lg justify-between items-center w-32">
-      <div className="grow flex flex-col justify-center ">
-        <Image src={imageSrc} alt={label} width={75} height={75} />
+    <div className=" cursor-pointer hover:shadow-2xl hover:bg-base-300 transition-all duration-300 flex flex-col gap-4 bg-base-200 px-2 py-3 rounded-lg justify-between items-center w-28 h-32">
+      <div className="grow flex flex-col justify-center max-h-16">
+        <Image
+          src={imageSrc}
+          alt={label}
+          width={100}
+          height={100}
+          className="w-full h-full onject-contain"
+        />
       </div>
       <div className="text-md font-semibold text-base-content text-center">
-        {label}
+        {id}
       </div>
     </div>
   );

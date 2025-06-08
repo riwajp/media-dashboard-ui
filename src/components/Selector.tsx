@@ -30,9 +30,9 @@ const Selector: React.FC<SelectorProps> = ({ label, icon, options }) => {
         onClick={() => setOpen((prev) => !prev)}
         className="flex justify-between items-center gap-2 cursor-pointer p-3 rounded-xl hover:bg-base-200 duration-300 w-full"
       >
-        <div className="text-xl text-accent">{icon}</div>
-        <div className="text-base-content font-semibold">{label}</div>
-        <HiSelector className="text-2xl text-accent" />
+        <div className="text-lg text-accent">{icon}</div>
+        <div className="text-base-content ">{label}</div>
+        <HiSelector className="text-xl text-accent" />
       </button>
 
       <div

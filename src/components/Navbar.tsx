@@ -36,6 +36,11 @@ const Navbar: React.FC<NavbarProps> = ({ isHidden }) => {
             label={t("alerts")}
             isActive={pathname.includes("/dashboard/alerts")}
           />
+          <NavbarLink
+            href="/dashboard/outlets"
+            label={"Outlets"}
+            isActive={pathname.includes("/dashboard/outlets")}
+          />
         </div>
       </div>
 
