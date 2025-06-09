@@ -1,14 +1,13 @@
 // app/layout.tsx
 
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 
-import { Oswald } from "next/font/google";
+import { Funnel_Sans } from "next/font/google";
 
 import ThemeProvider from "@/components/ThemeProvider";
 
-const oswald = Oswald({
+const funnel_sans = Funnel_Sans({
   subsets: ["latin"],
 });
 
@@ -23,8 +22,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body data-theme="light" className={`${oswald.className} antialiased`}>
+    <html lang="en" className={`${funnel_sans.className} antialiased`}>
+      <body data-theme="light">
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

@@ -100,34 +100,6 @@ export default async function Page() {
 
     return (
       <div className="flex flex-col gap-12 ">
-        <div className="flex  gap-4 justify-between items-center px-6">
-          <div className="flex gap-4 items-center h-16">
-            <div className="bg-white rounded-xl w-16 h-full shrink-0 overflow-hidden h-16">
-              <Image
-                src={outlet.imageSrc}
-                width={100}
-                height={100}
-                alt={outlet.label}
-                className="object-contain w-full h-full rounded-xl "
-              />
-            </div>
-            <div className="flex flex-col justify-between h-full py-2">
-              <div className="text-2xl font-bold">{outlet.label}</div>
-              <BiasMeter
-                segments={[
-                  { party: "uml", percentage: 70 },
-                  { party: "nc", percentage: 10 },
-                  { party: "mc", percentage: 20 },
-                ]}
-              />
-            </div>
-          </div>
-
-          <div className="text-md py-2 px-4 rounded-lg bg-base-300 flex gap-2 items-center">
-            <FaExternalLinkAlt className="text-sm" /> Visit
-          </div>
-        </div>
-
         <Draggable>
           <div className="flex gap-5 items-center border-base-300 border-b border-t pl-4 py-3   w-full">
             <IoIosTrendingUp className="text-xl text-base-content shrink-0" />

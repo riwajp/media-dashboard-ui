@@ -22,9 +22,9 @@ const Navbar: React.FC<NavbarProps> = ({ isHidden }) => {
         </div>
         <div className="flex flex-col gap-2 w-full ">
           <NavbarLink
-            href="/dashboard/stories"
-            label={t("stories")}
-            isActive={pathname.includes("/dashboard/stories")}
+            href="/dashboard/home"
+            label={t("home")}
+            isActive={pathname.includes("/dashboard/home")}
           />
           <NavbarLink
             href="/dashboard/graphs"

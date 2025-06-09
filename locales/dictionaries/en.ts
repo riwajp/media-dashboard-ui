@@ -1,6 +1,6 @@
 export default {
   navbar: {
-    stories: "Stories",
+    home: "Home",
     graphs: "Graphs",
     alerts: "Alerts",
   },

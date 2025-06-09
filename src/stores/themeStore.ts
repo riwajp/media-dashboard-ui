@@ -14,7 +14,6 @@ interface ThemeStore {
 export const useThemeStore = create<ThemeStore>((set) => ({
   theme: "dark",
   toggleTheme: () => {
-    console.log("Toggling theme");
     set((state) => ({
       theme: state.theme === "dark" ? "light" : "dark",
     }));

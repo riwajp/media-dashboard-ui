@@ -1,6 +1,6 @@
 export default {
   navbar: {
-    stories: "समाचार",
+    home: "समाचार",
     graphs: "रेखाचित्र",
     alerts: "सूचना",
   },
