@@ -401,11 +401,9 @@ const ChartLegend = (
       ref={legendRef}
       className={cx(
         "flex items-center",
-        { "justify-center": legendPosition === "center" },
-        {
-          "justify-start": legendPosition === "left",
-        },
-        { "justify-end": legendPosition === "right" }
+        legendPosition === "center" ? "justify-center" : "",
+        legendPosition === "left" ? "justify-start" : "",
+        legendPosition === "right" ? "justify-end" : ""
       )}
     >
       <Legend
@@ -697,7 +695,7 @@ const BarChart = React.forwardRef<HTMLDivElement, BarChartProps>(
                 "text-xs",
                 // text fill
                 "fill-gray-500 dark:fill-gray-500",
-                { "mt-4": layout !== "vertical" }
+                layout !== "vertical" ? "mt-4" : ""
               )}
               tickLine={false}
               axisLine={false}

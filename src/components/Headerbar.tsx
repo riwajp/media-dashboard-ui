@@ -10,7 +10,7 @@ type HeaderbarProps = {};
 
 const Headerbar: React.FC<HeaderbarProps> = () => {
   return (
-    <div className="flex bg-base-100 justify-between items-center w-full px-4 py-4">
+    <div className="flex bg-base-100 justify-between items-center w-full px-4 py-4 ">
       <div className="flex gap-4 items-center">
         <ThemeToogle />
         <Selector

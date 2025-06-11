@@ -49,6 +49,7 @@ const headlines = [
 ];
 
 import { DonutChart } from "@/components/charts/DonutChart";
+import BlindSpotCard from "@/components/cards/BlindSpotCard";
 
 const chartdata = [
   {
@@ -89,6 +90,40 @@ const barChartData = [
   { name: "Arachnids", "Number of articles": 251 },
   { name: "Corals", "Number of articles": 232 },
   { name: "Algae", "Number of articles": 98 },
+];
+const blindSpotData = [
+  {
+    label: "Protesters Demand Government Transparency in Kathmandu",
+    sourceOrg: "BBC",
+    sources: ["BBC", "NepalKhabar", "Ratopati", "OnlineKhabar"],
+    imageSrc:
+      "https://www.hindustantimes.com/ht-img/img/2025/03/28/1600x900/NEPAL-POLITICS-UNREST-MONARCHY-18_1743188219257_1743188226649.jpg",
+    keywords: ["Protest", "Transparency", "Kathmandu", "Government"],
+  },
+  {
+    label: "Prachanda’s Visit to China Sparks Political Debate",
+    sourceOrg: "OnlineKhabar",
+    sources: ["OnlineKhabar", "Republica", "TKP"],
+    imageSrc:
+      "https://republicaimg.nagariknewscdn.com/shared/web/uploads/media/pushpakamaldahal_20240110092721.jpg",
+    keywords: ["Prachanda", "China", "Diplomacy", "Politics"],
+  },
+  {
+    label: "Air Pollution Levels Spike Across Nepal’s Cities",
+    sourceOrg: "THT",
+    sources: ["THT", "BBC", "Republica", "OnlineKhabar"],
+    imageSrc:
+      "https://english.onlinekhabar.com/wp-content/uploads/2021/01/IMG_8744-scaled.jpg",
+    keywords: ["Air Pollution", "Kathmandu", "Environment", "Health"],
+  },
+  {
+    label: "Corruption Allegations Surface in Mega Project Deal",
+    sourceOrg: "TKP",
+    sources: ["TKP", "NepalKhabar", "Ratopati"],
+    imageSrc:
+      "https://risingnepaldaily.com/storage/media/70899/trans_VpGGHTUYvR.jpg",
+    keywords: ["Corruption", "Infrastructure", "Economy", "Scandal"],
+  },
 ];
 
 export default async function Page() {
@@ -148,6 +183,22 @@ export default async function Page() {
               yAxisWidth={80}
               layout="vertical"
             />
+          </div>
+        </div>
+
+        <div className="px-6">
+          <SectionHeading title="Blindspots" />
+          <div className="grid gap-6 gap-y-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            {blindSpotData.map((blindspot, index) => (
+              <BlindSpotCard
+                key={index}
+                label={blindspot.label}
+                sources={blindspot.sources}
+                imageSrc={blindspot.imageSrc}
+                keywords={blindspot.keywords}
+                sourceOrg={blindspot.sourceOrg}
+              />
+            ))}
           </div>
         </div>
       </div>

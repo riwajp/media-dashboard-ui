@@ -24,22 +24,22 @@ const Navbar: React.FC<NavbarProps> = ({ isHidden }) => {
           <NavbarLink
             href="/dashboard/home"
             label={t("home")}
-            isActive={pathname.includes("/dashboard/home")}
+            isActive={pathname?.includes("/dashboard/home")}
           />
           <NavbarLink
             href="/dashboard/graphs"
             label={t("graphs")}
-            isActive={pathname.includes("/dashboard/graphs")}
+            isActive={pathname?.includes("/dashboard/graphs")}
           />
           <NavbarLink
             href="/dashboard/alerts"
             label={t("alerts")}
-            isActive={pathname.includes("/dashboard/alerts")}
+            isActive={pathname?.includes("/dashboard/alerts")}
           />
           <NavbarLink
             href="/dashboard/outlets"
             label={"Outlets"}
-            isActive={pathname.includes("/dashboard/outlets")}
+            isActive={pathname?.includes("/dashboard/outlets")}
           />
         </div>
       </div>

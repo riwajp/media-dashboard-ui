@@ -1,4 +1,5 @@
 import HeadlineCard from "@/components/cards/HeadlineCard";
+import NewsCard from "@/components/cards/NewsCard";
 import SectionHeading from "@/components/SectionHeading";
 
 const headlines = [
@@ -86,10 +87,10 @@ export default async function Page() {
       <div className="flex flex-col gap-12">
         <div className="px-6">
           <SectionHeading title="Today's Headlines" />
-          <div className="grid gap-16 grid-cols-1 md:grid-cols-2  lg:grid-cols-3">
+          <div className="grid gap-4 md:gap-8 grid-cols-1 md:grid-cols-2  lg:grid-cols-3">
             {" "}
             {headlines.map((headline, index) => (
-              <HeadlineCard
+              <NewsCard
                 key={index}
                 label={headline.label}
                 source={headline.source}
