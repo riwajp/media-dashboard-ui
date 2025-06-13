@@ -15,12 +15,19 @@ const SectionHeading: React.FC<SectionHeadingProps> = ({
   size = "md",
 }) => {
   return (
-    <div className="flex justify-between items-center w-full pb-6">
+    <div
+      className={clsx(
+        "flex justify-between items-center w-full",
+        size === "sm" && "pb-2",
+        size === "md" && "pb-4",
+        size === "lg" && "pb-6"
+      )}
+    >
       <div
         className={clsx(
           "font-bold",
-          size === "sm" && "text-lg",
-          size === "md" && "text-xl",
+          size === "sm" && "text-lg ",
+          size === "md" && "text-xl ",
           size === "lg" && "text-2xl"
         )}
       >

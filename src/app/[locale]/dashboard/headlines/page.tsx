@@ -1,4 +1,3 @@
-import HeadlineCard from "@/components/cards/HeadlineCard";
 import NewsCard from "@/components/cards/NewsCard";
 import SectionHeading from "@/components/SectionHeading";
 

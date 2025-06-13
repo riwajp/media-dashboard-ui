@@ -22,8 +22,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${funnel_sans.className} antialiased`}>
-      <body data-theme="light">
+    <html lang="en" className={`${funnel_sans.className} antialiased h-full`}>
+      <body data-theme="light " className="h-full">
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>

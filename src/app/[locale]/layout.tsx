@@ -13,7 +13,7 @@ export default async function Layout({
 
   return (
     <I18nProviderClient locale={locale}>
-      <div className="">{children}</div>
+      <div className="h-full">{children}</div>
     </I18nProviderClient>
   );
 }
