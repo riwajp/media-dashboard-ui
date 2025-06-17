@@ -18,3 +18,7 @@ export const mockFetch = (endpoint: string): Promise<any> => {
     }, delay);
   });
 };
+
+export function delay() {
+  return new Promise((res) => setTimeout(res, Math.random() * 1000 + 300));
+}

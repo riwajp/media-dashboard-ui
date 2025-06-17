@@ -20,7 +20,7 @@ const Graph3D = () => {
   const [rawData, setRawData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [dimensions, setDimensions] = useState({ width: 800, height: 600 });
-  const [viewMode, setViewMode] = useState<"2D" | "3D">("3D");
+  const [viewMode, setViewMode] = useState<"2D" | "3D" | "GIS">("3D");
 
   const containerRef = useRef<any>(null);
 

@@ -4,12 +4,22 @@ import React, { useRef, useEffect, useState } from "react";
 import { HiSelector } from "react-icons/hi";
 
 type SelectorProps = {
-  label: string;
   icon?: React.ReactNode;
+  value?: string;
   options: string[];
+  onSelect?: (value: any) => void;
+  renderValue?: (value: any) => React.ReactNode;
+  renderOption?: (option: any) => React.ReactNode;
 };
 
-const Selector: React.FC<SelectorProps> = ({ label, icon, options }) => {
+const Selector: React.FC<SelectorProps> = ({
+  icon,
+  options,
+  value,
+  onSelect,
+  renderValue,
+  renderOption,
+}) => {
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
 
@@ -31,7 +41,9 @@ const Selector: React.FC<SelectorProps> = ({ label, icon, options }) => {
         className="flex justify-between items-center gap-2 cursor-pointer p-3 rounded-xl hover:bg-base-200 duration-300 w-full"
       >
         <div className="text-lg text-accent">{icon}</div>
-        <div className="text-base-content ">{label}</div>
+        <div className="text-base-content">
+          {renderValue ? renderValue(value || "") : value}
+        </div>
         <HiSelector className="text-xl text-accent" />
       </button>
 
@@ -46,8 +58,12 @@ const Selector: React.FC<SelectorProps> = ({ label, icon, options }) => {
           <div
             key={option}
             className="p-2 text-md font-semibold hover:bg-base-200 rounded-lg cursor-pointer transition duration-200"
+            onClick={() => {
+              onSelect?.(option);
+              setOpen(false);
+            }}
           >
-            {option}
+            {renderOption ? renderOption(option) : option}
           </div>
         ))}
       </div>

@@ -73,7 +73,7 @@ const Navbar: React.FC<NavbarProps> = ({ isCollapsed, setIsCollapsed }) => {
           />
           <NavbarLink
             href="/dashboard/outlets"
-            label={"Outlets"}
+            label={t("outlets")}
             icon={<FaNewspaper />}
             isActive={pathname?.includes("/dashboard/outlets")}
             isCollapsed={isCollapsed}

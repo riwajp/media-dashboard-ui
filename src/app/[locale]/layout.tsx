@@ -1,5 +1,6 @@
 import { ReactElement } from "react";
-import { I18nProviderClient } from "@locales/client";
+
+import LocaleProvider from "@/components/layouts/LocaleProvider";
 
 export default async function Layout({
   params,
@@ -12,8 +13,8 @@ export default async function Layout({
   console.log(locale);
 
   return (
-    <I18nProviderClient locale={locale}>
+    <LocaleProvider locale={locale}>
       <div className="h-full">{children}</div>
-    </I18nProviderClient>
+    </LocaleProvider>
   );
 }

@@ -1,9 +1,14 @@
+"use client";
+
+import { useScopedI18n } from "@locales/client";
 import React from "react";
 import { IoSearch } from "react-icons/io5";
 
 type SearchProps = {};
 
 const Search: React.FC<SearchProps> = () => {
+  const t = useScopedI18n("header");
+
   return (
     <div className="flex gap-2 items-center">
       <label className="input bg-base-300 flex items-center gap-2 text-accent h-11 ">
@@ -22,7 +27,7 @@ const Search: React.FC<SearchProps> = () => {
         <input
           type="text"
           className="grow text-base-content "
-          placeholder="Search"
+          placeholder={t("search")}
         />
       </label>
 

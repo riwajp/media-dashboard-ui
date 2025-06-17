@@ -2,7 +2,7 @@
   {
     "id": "TKP",
     "label": "The Kathmandu Post",
-    "imageSrc": "https://tendernotice.com.np/images/TheKathmanduPost.png?_debugResources=y&n=1748976238281",
+    "imageSrc": "/assets/tkp.jpeg",
     "trending": ["politics", "economy", "governance"],
     "bias": [
       { "party": "uml", "percentage": 60 },
@@ -13,7 +13,7 @@
   {
     "id": "THT",
     "label": "The Himalayan Times",
-    "imageSrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCnIZ9wYAJ-2ZblcXNiyyZ7zoYSqoJHm4_iw&s",
+    "imageSrc": "/assets/tht.jpeg",
     "trending": ["sports", "international", "covid-19"],
     "bias": [
       { "party": "uml", "percentage": 40 },
