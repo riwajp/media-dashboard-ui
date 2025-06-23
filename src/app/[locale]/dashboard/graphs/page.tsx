@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import { IoSearch } from "react-icons/io5";
 import GraphViewToggle from "@/components/GraphViewToggle";
-import * as d3 from "d3";
 
 const ForceGraph3D = dynamic(() => import("react-force-graph-3d"), {
   ssr: false,
@@ -35,32 +34,6 @@ const Graph3D = () => {
       setDimensions({ width: clientWidth, height: clientHeight });
     }
   }, []);
-
-  // In a useEffect or after your ForceGraph2D is ready:
-  useEffect(() => {
-    if (viewMode != "2D") return;
-    if (!graphRef.current) return;
-
-    const fg = graphRef.current;
-
-    // Increase link distance
-    fg.d3Force("link")?.distance(500); // You can tweak this number
-
-    // Add collision force to prevent overlap
-    fg.d3Force(
-      "collide",
-      d3.forceCollide().radius((node: any) => {
-        // Set radius depending on degree or just use a fixed value
-        const degree = graphData.links.filter(
-          (l) => l.source === node.id || l.target === node.id
-        ).length;
-        return 120 + degree ** 2; // minimum radius for spacing
-      })
-    );
-
-    // Reheat simulation after changing forces
-    fg.d3ReheatSimulation();
-  }, [graphData]);
 
   const handleFilter = () => {
     if (!rawData || !keyword.trim()) return;

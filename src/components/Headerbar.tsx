@@ -11,6 +11,7 @@ import { useRouter } from "next/navigation";
 import { useScopedI18n } from "@locales/client";
 import { useAuthStore } from "@/stores/authStore";
 import { IoLogOut } from "react-icons/io5";
+import axiosClient from "@/axios";
 
 type HeaderbarProps = {};
 
@@ -37,10 +38,14 @@ const handleLocaleRedirect = (
 
 const Headerbar: React.FC<HeaderbarProps> = () => {
   const { locale, setLocale, period, setPeriod } = useContentStore();
-  const { isAuthenticated, resetAuth } = useAuthStore();
+  const { isAuthenticated, resetAuth, setLoading } = useAuthStore();
 
   const router = useRouter();
   const t = useScopedI18n("header");
+
+  const handleLogout = () => {
+    setLoading(true);
+  };
 
   return (
     <div className="flex bg-base-100 justify-between items-center w-full px-4 py-4">
