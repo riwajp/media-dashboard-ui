@@ -9,6 +9,8 @@ import ThemeToogle from "./ThemeToogle";
 import { useContentStore, Language, TimePeriod } from "@/stores/contentStore";
 import { useRouter } from "next/navigation";
 import { useScopedI18n } from "@locales/client";
+import { useAuthStore } from "@/stores/authStore";
+import { IoLogOut } from "react-icons/io5";
 
 type HeaderbarProps = {};
 
@@ -35,6 +37,7 @@ const handleLocaleRedirect = (
 
 const Headerbar: React.FC<HeaderbarProps> = () => {
   const { locale, setLocale, period, setPeriod } = useContentStore();
+  const { isAuthenticated, resetAuth } = useAuthStore();
 
   const router = useRouter();
   const t = useScopedI18n("header");
@@ -66,9 +69,26 @@ const Headerbar: React.FC<HeaderbarProps> = () => {
 
       <div className="flex gap-4">
         <Search />
-        <button className="btn btn-accent px-10 py-2 rounded-sm h-11 min-h-11">
-          LOGIN
-        </button>
+
+        {!isAuthenticated && (
+          <button
+            className="btn btn-accent px-10 py-2 rounded-md h-11 min-h-11"
+            onClick={() => router.push("/login")}
+          >
+            LOGIN
+          </button>
+        )}
+
+        {!!isAuthenticated && (
+          <button
+            className="btn btn-info px-2 py-1 rounded-md h-11 min-h-11"
+            onClick={() => {
+              resetAuth();
+            }}
+          >
+            <IoLogOut className="text-xl" />
+          </button>
+        )}
       </div>
     </div>
   );

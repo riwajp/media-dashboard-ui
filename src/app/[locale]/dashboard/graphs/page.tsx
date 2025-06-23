@@ -152,8 +152,6 @@ const Graph3D = () => {
             backgroundColor="#0e0d14"
             graphData={graphData}
             linkColor={(link: any) => {
-              // replicate 3D auto color by group, fallback color
-
               return `rgba(0,122,100,0.3)`;
             }}
             nodeLabel={(node: any) => `${node.id}`}

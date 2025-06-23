@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
-
 import LocaleProvider from "@/components/layouts/LocaleProvider";
+import ToasterContainer from "@/components/ToasterContainer";
 
 export default async function Layout({
   params,
@@ -14,6 +14,7 @@ export default async function Layout({
 
   return (
     <LocaleProvider locale={locale}>
+      <ToasterContainer />
       <div className="h-full">{children}</div>
     </LocaleProvider>
   );

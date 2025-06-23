@@ -1,12 +1,26 @@
-// src/lib/axios.ts
 import axios from "axios";
 
-const api = axios.create({
+function getAccessToken() {
+  if (typeof window === "undefined") return null;
+  return localStorage.getItem("token");
+}
+
+const axiosClient = axios.create({
   baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || "http://localhost:3000/api",
   headers: {
     "Content-Type": "application/json",
   },
-  withCredentials: true, // optional, depends on your auth
 });
 
-export default api;
+axiosClient.interceptors.request.use(
+  (config) => {
+    const token = getAccessToken();
+    if (token) {
+      config.headers.Authorization = `Bearer ${token}`;
+    }
+    return config;
+  },
+  (error) => Promise.reject(error)
+);
+
+export default axiosClient;
